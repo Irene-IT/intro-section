@@ -1,0 +1,15 @@
+body{
+    background-color: aqua;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    display: inline-block;
+    /* position: relative; */
+    width: 60vw;
+    left: 20%;
+    text-align: justify;
+}
