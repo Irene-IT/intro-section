@@ -49,18 +49,27 @@
 
     body {
         color: var(--mediumgray);
+        padding-block-start: 20px;
     }
-header {
-    max-width: 1380px;
-padding-inline: 10px;
-margin-inline: 0;
-}
+
+    header {
+        max-width: 1380px;
+        padding-inline: 10px;
+        margin-inline: 0;
+
+    }
+
     /* .hero{} */
 
     button {
         cursor: pointer;
         color: inherit;
         font-family: inherit;
+        font-weight: inherit;
+    }
+
+    main {
+        padding-block-start: 68px;
     }
 }
 
@@ -70,14 +79,122 @@ margin-inline: 0;
         padding-inline: 10px;
         margin-inline: auto;
     }
+
     .flx {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+    header.flx {
+        justify-content: space-between;
+
+        div:first-child {
+            column-gap: 64px;
+        }
+
+        div:last-child {
+            column-gap: 40px;
+        }
+    }
+
+    .hero {
+        column-gap: 125px;
+
+        p {
+            max-width: 454px;
+            font-size: 18px;
+            line-height: 28px;
+            color: var(--mediumgray);
+        }
+    }
+
+    .hero-info {
+        div:first-child {
+            flex-direction: column;
+            gap: 48px;
+            align-items: start;
+            max-width: 540px;
+        }
+    }
 }
 
+
 @layer components {
+    div {
+        button {
+            font-size: 14px;
+            line-height: 16px;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--almostblack);
+            }
+        }
+
+        button:last-child {
+            border: 1.5px solid var(--mediumgray);
+            border-radius: 14px;
+            min-width: 104px;
+            height: 42px;
+            padding-inline: 22px;
+
+            &:hover {
+                color: var(--almostblack);
+                border: 1.5px solid var(--almostblack);
+
+            }
+        }
+    }
+
+    nav {
+        ul {
+            column-gap: 40px;
+
+            a {
+                font-size: 14px;
+                line-height: 16px;
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+                    color: var(--almostblack);
+                }
+            }
+        }
+    }
+
+    h1 {
+        font-family: "Epilogue";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: -1px;
+        color: var(--almostblack);
+    }
+
+    main a {
+        font-size: 18px;
+        line-height: 28px;
+        color: var(--almostwhite);
+        background-color: var(--almostblack);
+        border: 1px solid transparent;
+        border-radius: 14px;
+        min-width: 164px;
+        height: 56px;
+        padding-inline-start: 30px;
+        align-content: center;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--almostblack);
+            background-color: var(--almostwhite);
+            border: 1px solid var(--almostblack);
+
+
+        }
+    }
+
     .hero-bg {
         max-width: 480px;
         width: 100%;
@@ -87,4 +204,5 @@ margin-inline: 0;
         background-size: contain;
 
     }
+
 }
